@@ -1008,10 +1008,13 @@ html[data-theme="light"] .skill-icon.sand { color: #5a6bd8; }
 .chip-dot.dj { background: #6fbf8f; }
 .chip-dot.fl { background: #a5b8c9; }
 .chip-dot.react { background: #61d1e0; }
+.chip-dot.node { background: #e87a8f; }
+.chip-dot.vue { background: #8fd07a; }
 .chip-dot.flutter { background: #6fb2ea; }
 .chip-dot.mysql { background: #e0a95f; }
 .chip-dot.mongo { background: #7bc98a; }
 .chip-dot.lite { background: #9fb0c4; }
+.chip-dot.postgresql { background: #7fa8e0; }
 .chip-dot.git { background: #e8845f; }
 .chip-dot.android { background: #8fce7d; }
 .chip-dot.vscode { background: #6aa9e0; }
