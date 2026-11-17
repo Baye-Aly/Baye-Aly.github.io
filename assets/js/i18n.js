@@ -28,7 +28,7 @@
       "nav.education": "Formation",
       "nav.contact": "Contact",
 
-      "hero.status": "Disponible pour un stage · Nouakchott",
+      "hero.status": "Disponible · Nouakchott",
       "hero.first": "Baye Aly",
       "hero.last": "Elhadj",
       "hero.role": "Développeur",
@@ -37,7 +37,7 @@
       "hero.word3": "full-stack",
       "hero.roleSr": "web et mobile, full-stack",
       "hero.lead":
-        "Étudiant en 3ᵉ année en Développement des Systèmes d'Information à <strong>SupNum</strong>, Nouakchott. Je conçois des applications web et mobiles avec Python, Django, React et Flutter.",
+        "Étudiant en 3ᵉ année en Développement des Systèmes d'Information à <strong>SupNum</strong>, Nouakchott. Je conçois des applications web et mobiles avec Python, JavaScript, PHP et Dart.",
       "hero.cta": "Discutons d'un projet",
 
       "stats.year": "Année",
@@ -45,7 +45,7 @@
       "stats.languages": "Langages",
       "stats.languagesValue": '<span class="count" data-count="6">6</span> <small>maîtrisés</small>',
       "stats.frameworks": "Frameworks",
-      "stats.frameworksValue": '<span class="count" data-count="4">4</span> <small>utilisés</small>',
+      "stats.frameworksValue": '<span class="count" data-count="6">6</span> <small>utilisés</small>',
       "stats.projects": "Projets",
       "stats.projectsValue": '<span class="count" data-count="3">3</span> <small>réalisés</small>',
 
@@ -84,9 +84,9 @@
       "skills.langs": "Langages",
       "skills.langsCount": "6 technologies",
       "skills.frameworks": "Frameworks",
-      "skills.frameworksCount": "4 technologies",
+      "skills.frameworksCount": "6 technologies",
       "skills.databases": "Bases de données",
-      "skills.databasesCount": "3 systèmes",
+      "skills.databasesCount": "4 systèmes",
       "skills.tools": "Outils & environnements",
       "skills.toolsCount": "4 outils",
       "skills.dbNote": "Modélisation, requêtes SQL et intégration aux applications web.",
@@ -137,13 +137,13 @@
       "languages.frLevel": "Courant · langue d'enseignement",
       "languages.frAria": "Niveau : courant",
       "languages.en": "Anglais",
-      "languages.enLevel": "Intermédiaire · lecture technique",
-      "languages.enAria": "Niveau : intermédiaire",
+      "languages.enLevel": "Bonne connaissance · lecture technique",
+      "languages.enAria": "Niveau : bonne connaissance",
 
       "sec.contact": "Contact",
-      "contact.title": "Une idée, un stage,<br />un projet à construire ?",
+      "contact.title": "Une idée, <br />un projet à construire ?",
       "contact.lead":
-        "Je suis disponible pour un stage ou un projet académique. Écrivez-moi : je réponds rapidement, en français, en arabe ou en anglais.",
+        "Je suis disponible pour un projet académique ou professionnel. Écrivez-moi : je réponds rapidement, en français, en arabe ou en anglais.",
       "contact.emailBtn": "Envoyer un e-mail",
       "contact.email": "E-mail",
       "contact.phone": "Téléphone",
@@ -153,7 +153,7 @@
       "footer.email": "E-mail",
       "footer.cv": "CV (PDF)",
       "footer.copyrightStart": "©",
-      "footer.copyrightEnd": "Baye Aly Elhadj · SupNum, Nouakchott",
+      "footer.copyrightEnd": "Baye Aly Elhadj · Nouakchott",
 
       "a11y.skip": "Aller au contenu",
       "a11y.mainNav": "Navigation principale",
@@ -192,7 +192,7 @@
       "nav.education": "Education",
       "nav.contact": "Contact",
 
-      "hero.status": "Available for an internship · Nouakchott",
+      "hero.status": "Available · Nouakchott",
       "hero.first": "Baye Aly",
       "hero.last": "Elhadj",
       "hero.role": "Developer",
@@ -201,7 +201,7 @@
       "hero.word3": "full-stack",
       "hero.roleSr": "web and mobile, full-stack",
       "hero.lead":
-        "Third-year Information Systems Development student at <strong>SupNum</strong>, Nouakchott. I build web and mobile applications with Python, Django, React and Flutter.",
+        "Third-year Information Systems Development student at <strong>SupNum</strong>, Nouakchott. I build web and mobile applications with Python, JavaScript, PHP and Dart.",
       "hero.cta": "Let's talk about a project",
 
       "stats.year": "Year",
@@ -209,7 +209,7 @@
       "stats.languages": "Languages",
       "stats.languagesValue": '<span class="count" data-count="6">6</span> <small>mastered</small>',
       "stats.frameworks": "Frameworks",
-      "stats.frameworksValue": '<span class="count" data-count="4">4</span> <small>in use</small>',
+      "stats.frameworksValue": '<span class="count" data-count="6">6</span> <small>in use</small>',
       "stats.projects": "Projects",
       "stats.projectsValue": '<span class="count" data-count="3">3</span> <small>completed</small>',
 
@@ -248,9 +248,9 @@
       "skills.langs": "Languages",
       "skills.langsCount": "6 technologies",
       "skills.frameworks": "Frameworks",
-      "skills.frameworksCount": "4 technologies",
+      "skills.frameworksCount": "6 technologies",
       "skills.databases": "Databases",
-      "skills.databasesCount": "3 systems",
+      "skills.databasesCount": "4 systems",
       "skills.tools": "Tools & environments",
       "skills.toolsCount": "4 tools",
       "skills.dbNote": "Data modeling, SQL queries and integration into web applications.",
@@ -301,13 +301,13 @@
       "languages.frLevel": "Fluent · language of instruction",
       "languages.frAria": "Level: fluent",
       "languages.en": "English",
-      "languages.enLevel": "Intermediate · technical reading",
-      "languages.enAria": "Level: intermediate",
+      "languages.enLevel": "Good knowledge · technical reading",
+      "languages.enAria": "Level: good knowledge",
 
       "sec.contact": "Contact",
-      "contact.title": "An idea, an internship,<br />a project to build?",
+      "contact.title": "An idea, <br />a project to build?",
       "contact.lead":
-        "I'm available for an internship or an academic project. Write to me — I reply quickly in French, Arabic or English.",
+        "I'm available for an academic or professional project. Write to me — I reply quickly in French, Arabic or English.",
       "contact.emailBtn": "Send an email",
       "contact.email": "Email",
       "contact.phone": "Phone",
@@ -317,7 +317,7 @@
       "footer.email": "Email",
       "footer.cv": "CV (PDF)",
       "footer.copyrightStart": "©",
-      "footer.copyrightEnd": "Baye Aly Elhadj · SupNum, Nouakchott",
+      "footer.copyrightEnd": "Baye Aly Elhadj · Nouakchott",
 
       "a11y.skip": "Skip to content",
       "a11y.mainNav": "Main navigation",
@@ -356,7 +356,7 @@
       "nav.education": "التكوين",
       "nav.contact": "تواصل",
 
-      "hero.status": "متاح للتدريب · نواكشوط",
+      "hero.status": "متاح · نواكشوط",
       "hero.first": "باي علي",
       "hero.last": "الحاج",
       "hero.role": "مطوّر",
@@ -365,7 +365,7 @@
       "hero.word3": "متكامل",
       "hero.roleSr": "ويب وموبايل، تطوير متكامل",
       "hero.lead":
-        "طالب في السنة الثالثة لتطوير نظم المعلومات في <strong>المعهد العالي للرقمنة (SupNum)</strong> بنواكشوط. أطوّر تطبيقات ويب وموبايل باستخدام Python وDjango وReact وFlutter.",
+        "طالب في السنة الثالثة لتطوير نظم المعلومات في <strong>المعهد العالي للرقمنة (SupNum)</strong> بنواكشوط. أطوّر تطبيقات ويب وموبايل باستخدام Python وJavaScript وPHP وDart.",
       "hero.cta": "لنتحدث عن مشروعك",
 
       "stats.year": "السنة",
@@ -373,7 +373,7 @@
       "stats.languages": "اللغات",
       "stats.languagesValue": '<span class="count" data-count="6">6</span> <small>لغات برمجية</small>',
       "stats.frameworks": "الأطر",
-      "stats.frameworksValue": '<span class="count" data-count="4">4</span> <small>أطر عمل</small>',
+      "stats.frameworksValue": '<span class="count" data-count="6">6</span> <small>أطر عمل</small>',
       "stats.projects": "المشاريع",
       "stats.projectsValue": '<span class="count" data-count="3">3</span> <small>مشاريع منجزة</small>',
 
@@ -412,9 +412,9 @@
       "skills.langs": "لغات البرمجة",
       "skills.langsCount": "6 تقنيات",
       "skills.frameworks": "أطر العمل",
-      "skills.frameworksCount": "4 تقنيات",
+      "skills.frameworksCount": "6 تقنيات",
       "skills.databases": "قواعد البيانات",
-      "skills.databasesCount": "3 أنظمة",
+      "skills.databasesCount": "4 أنظمة",
       "skills.tools": "الأدوات والبيئات",
       "skills.toolsCount": "4 أدوات",
       "skills.dbNote": "النمذجة، استعلامات SQL ودمجها في تطبيقات الويب.",
@@ -464,13 +464,13 @@
       "languages.frLevel": "بطلاقة · لغة التدريس",
       "languages.frAria": "المستوى: بطلاقة",
       "languages.en": "الإنجليزية",
-      "languages.enLevel": "متوسط · قراءة تقنية",
-      "languages.enAria": "المستوى: متوسط",
+      "languages.enLevel": "معرفة جيدة · قراءة تقنية",
+      "languages.enAria": "المستوى: معرفة جيدة",
 
       "sec.contact": "تواصل",
-      "contact.title": "فكرة، تدريب،<br />أم مشروع نبنيه معًا؟",
+      "contact.title": "فكرة،<br />أم مشروع نبنيه معًا؟",
       "contact.lead":
-        "متاح للتدريب أو لمشروع أكاديمي. راسلني: أرد بسرعة بالعربية أو الفرنسية أو الإنجليزية.",
+        "متاح لمشروع أكاديمي أو مهني. راسلني: أرد بسرعة بالعربية أو الفرنسية أو الإنجليزية.",
       "contact.emailBtn": "أرسل بريدًا إلكترونيًا",
       "contact.email": "البريد الإلكتروني",
       "contact.phone": "الهاتف",
@@ -480,7 +480,7 @@
       "footer.email": "البريد",
       "footer.cv": "السيرة الذاتية (PDF)",
       "footer.copyrightStart": "©",
-      "footer.copyrightEnd": "باي علي الحاج · SupNum، نواكشوط",
+      "footer.copyrightEnd": "باي علي الحاج · نواكشوط",
 
       "a11y.skip": "الانتقال إلى المحتوى",
       "a11y.mainNav": "التنقل الرئيسي",
