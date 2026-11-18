@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Aperçu du système de gestion des restaurants universitaires">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0d18"/>
+      <stop offset="0.55" stop-color="#1b1626"/>
+      <stop offset="1" stop-color="#3a2a33"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f0bd83"/>
+      <stop offset="1" stop-color="#e8896d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="1080" cy="80" r="260" fill="#e8896d" opacity="0.1"/>
+  <circle cx="90" cy="630" r="260" fill="#f0bd83" opacity="0.08"/>
+
+  <rect x="60" y="42" width="1080" height="591" rx="18" fill="#12121d" stroke="#2c2a3c"/>
+  <rect x="60" y="42" width="1080" height="44" rx="18" fill="#1a1826"/>
+  <rect x="60" y="68" width="1080" height="18" fill="#1a1826"/>
+  <circle cx="84" cy="64" r="5" fill="#e87a8f"/><circle cx="102" cy="64" r="5" fill="#e8d06d"/><circle cx="120" cy="64" r="5" fill="#7bc98a"/>
+  <rect x="450" y="55" width="300" height="18" rx="9" fill="#252233"/>
+  <text x="600" y="68" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#9089a8">restaurant universitaire — tickets repas</text>
+
+  <rect x="60" y="86" width="1080" height="74" fill="#171523"/>
+  <circle cx="102" cy="123" r="20" fill="url(#accent)"/>
+  <path d="M94 132v-12a8 8 0 0 1 16 0v12M98 120h12" stroke="#1a1020" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <text x="136" y="120" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#f4f1fb">Resto U · SupNum</text>
+  <text x="136" y="137" font-family="Segoe UI, sans-serif" font-size="9" fill="#9089a8">Semestre 3 · Projet intégrateur</text>
+
+  <g font-family="Segoe UI, sans-serif" font-size="11" fill="#9b93b4">
+    <text x="640" y="128">Menu du jour</text>
+    <text x="746" y="128">Réservations</text>
+    <text x="848" y="128">Tickets</text>
+    <text x="920" y="128">Services</text>
+    <text x="988" y="128">Étudiants</text>
+  </g>
+  <rect x="1052" y="110" width="64" height="26" rx="13" fill="#3a2a33"/>
+  <text x="1084" y="127" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#f0bd83">Caisse</text>
+
+  <text x="100" y="202" font-family="Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#f4f1fb">Tickets repas</text>
+  <text x="100" y="222" font-family="Segoe UI, sans-serif" font-size="10" fill="#9b93b4">Gestion des services, des réservations et de la fréquentation</text>
+
+  <g>
+    <rect x="100" y="248" width="220" height="76" rx="12" fill="#1a1826" stroke="#302c42"/>
+    <text x="118" y="272" font-family="Segoe UI, sans-serif" font-size="9" fill="#9b93b4">TICKETS DU JOUR</text>
+    <text x="118" y="304" font-family="Segoe UI, sans-serif" font-size="25" font-weight="700" fill="#f4f1fb">326</text>
+
+    <rect x="336" y="248" width="220" height="76" rx="12" fill="#1a1826" stroke="#302c42"/>
+    <text x="354" y="272" font-family="Segoe UI, sans-serif" font-size="9" fill="#9b93b4">SERVIS</text>
+    <text x="354" y="304" font-family="Segoe UI, sans-serif" font-size="25" font-weight="700" fill="#7bc98a">289</text>
+
+    <rect x="572" y="248" width="220" height="76" rx="12" fill="#1a1826" stroke="#302c42"/>
+    <text x="590" y="272" font-family="Segoe UI, sans-serif" font-size="9" fill="#9b93b4">EN ATTENTE</text>
+    <text x="590" y="304" font-family="Segoe UI, sans-serif" font-size="25" font-weight="700" fill="#f0bd83">37</text>
+
+    <rect x="808" y="248" width="272" height="76" rx="12" fill="#1a1826" stroke="#302c42"/>
+    <text x="826" y="272" font-family="Segoe UI, sans-serif" font-size="9" fill="#9b93b4">TAUX DE FRÉQUENTATION</text>
+    <rect x="826" y="288" width="200" height="8" rx="4" fill="#2b2738"/>
+    <rect x="826" y="288" width="174" height="8" rx="4" fill="url(#accent)"/>
+    <text x="1040" y="296" font-family="Segoe UI, sans-serif" font-size="10" fill="#f0bd83">87%</text>
+  </g>
+
+  <rect x="100" y="348" width="600" height="258" rx="12" fill="#1a1826" stroke="#302c42"/>
+  <text x="120" y="376" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#e8e3f4">Services du jour</text>
+  <g font-family="Segoe UI, sans-serif">
+    <rect x="120" y="392" width="560" height="44" rx="9" fill="#221f30"/>
+    <circle cx="144" cy="414" r="9" fill="#3a2a33"/>
+    <text x="162" y="418" font-size="10" fill="#e8e3f4">Petit-déjeuner</text>
+    <text x="470" y="410" font-size="8" fill="#9b93b4">07:30 — 09:30</text>
+    <text x="470" y="424" font-size="8" fill="#7bc98a">128 tickets</text>
+
+    <rect x="120" y="446" width="560" height="44" rx="9" fill="#221f30"/>
+    <circle cx="144" cy="468" r="9" fill="#3a2a33"/>
+    <text x="162" y="472" font-size="10" fill="#e8e3f4">Déjeuner</text>
+    <text x="470" y="464" font-size="8" fill="#9b93b4">12:00 — 14:30</text>
+    <text x="470" y="478" font-size="8" fill="#f0bd83">142 tickets</text>
+
+    <rect x="120" y="500" width="560" height="44" rx="9" fill="#221f30"/>
+    <circle cx="144" cy="522" r="9" fill="#3a2a33"/>
+    <text x="162" y="526" font-size="10" fill="#e8e3f4">Dîner</text>
+    <text x="470" y="518" font-size="8" fill="#9b93b4">18:30 — 21:00</text>
+    <text x="470" y="532" font-size="8" fill="#9b93b4">56 tickets</text>
+
+    <rect x="120" y="558" width="560" height="34" rx="9" fill="none" stroke="#302c42" stroke-dasharray="4 4"/>
+    <text x="400" y="580" text-anchor="middle" font-size="9" fill="#9b93b4">+ Ajouter un service</text>
+  </g>
+
+  <rect x="716" y="348" width="364" height="258" rx="12" fill="#1a1826" stroke="#302c42"/>
+  <text x="736" y="376" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#e8e3f4">Mon ticket</text>
+  <rect x="736" y="392" width="324" height="194" rx="14" fill="#221f30" stroke="#3a3348"/>
+  <text x="756" y="418" font-family="Segoe UI, sans-serif" font-size="9" fill="#9b93b4">TICKET REPAS · SEMESTRE 3</text>
+  <text x="756" y="450" font-family="Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#f4f1fb">Déjeuner</text>
+  <text x="756" y="470" font-family="Segoe UI, sans-serif" font-size="10" fill="#f0bd83">Validé · 12:42</text>
+  <g fill="#3a3348">
+    <rect x="756" y="486" width="9" height="9"/><rect x="771" y="486" width="9" height="9"/><rect x="786" y="486" width="9" height="9"/><rect x="801" y="486" width="9" height="9"/><rect x="816" y="486" width="9" height="9"/>
+    <rect x="756" y="501" width="9" height="9"/><rect x="786" y="501" width="9" height="9"/><rect x="816" y="501" width="9" height="9"/>
+    <rect x="771" y="516" width="9" height="9"/><rect x="801" y="516" width="9" height="9"/>
+    <rect x="756" y="531" width="9" height="9"/><rect x="786" y="531" width="9" height="9"/><rect x="816" y="531" width="9" height="9"/>
+  </g>
+  <text x="756" y="566" font-family="Segoe UI, sans-serif" font-size="9" fill="#9b93b4">Étudiant · Baye Aly Elhadj</text>
+  <text x="1040" y="566" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="9" fill="#9b93b4">#RU-00326</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Aperçu de l'application mobile bloc_notes">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080b16"/>
+      <stop offset="0.5" stop-color="#151428"/>
+      <stop offset="1" stop-color="#2a2a52"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0bd83"/>
+      <stop offset="1" stop-color="#9aa8ff"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0bd83" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#9aa8ff" stop-opacity="0.14"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="1040" cy="100" r="300" fill="#9aa8ff" opacity="0.1"/>
+  <circle cx="140" cy="620" r="280" fill="#f0bd83" opacity="0.08"/>
+
+  <!-- Left copy -->
+  <text x="90" y="252" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" letter-spacing="3" fill="#f0bd83">FLUTTER · DART</text>
+  <text x="90" y="318" font-family="Segoe UI, sans-serif" font-size="54" font-weight="700" fill="#f4f3ff">bloc_notes</text>
+  <text x="90" y="358" font-family="Segoe UI, sans-serif" font-size="17" fill="#a9a6c9">Prenez des notes, où que vous soyez.</text>
+  <g font-family="Segoe UI, sans-serif" font-size="13" fill="#8b88ad">
+    <circle cx="98" cy="400" r="3" fill="#56cec0"/><text x="114" y="405">Création, édition et suppression (CRUD)</text>
+    <circle cx="98" cy="432" r="3" fill="#f0bd83"/><text x="114" y="437">Interface responsive et Material Design</text>
+    <circle cx="98" cy="464" r="3" fill="#9aa8ff"/><text x="114" y="469">Organisation simple des notes</text>
+  </g>
+  <rect x="90" y="512" width="120" height="34" rx="17" fill="none" stroke="#3c3a5c"/>
+  <text x="150" y="534" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#c9c6e4">Flutter</text>
+  <rect x="220" y="512" width="86" height="34" rx="17" fill="none" stroke="#3c3a5c"/>
+  <text x="263" y="534" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#c9c6e4">Dart</text>
+
+  <!-- Phone -->
+  <rect x="760" y="70" width="310" height="560" rx="42" fill="#0c0e1a" stroke="#3a395c" stroke-width="2"/>
+  <rect x="772" y="82" width="286" height="536" rx="34" fill="#121426"/>
+  <rect x="848" y="96" width="134" height="22" rx="11" fill="#0c0e1a"/>
+  <circle cx="962" cy="107" r="4" fill="#2c2f4a"/>
+
+  <text x="796" y="168" font-family="Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#f4f3ff">Mes notes</text>
+  <text x="796" y="188" font-family="Segoe UI, sans-serif" font-size="10" fill="#8b88ad">3 notes · aujourd'hui</text>
+  <circle cx="1022" cy="180" r="17" fill="url(#accent)"/>
+  <path d="M1022 173v14M1015 180h14" stroke="#121426" stroke-width="2.2" stroke-linecap="round"/>
+
+  <rect x="796" y="208" width="238" height="34" rx="12" fill="#1b1e34"/>
+  <circle cx="814" cy="225" r="6" fill="none" stroke="#6e6b91" stroke-width="1.6"/>
+  <path d="M819 230l5 5" stroke="#6e6b91" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="832" y="229" font-family="Segoe UI, sans-serif" font-size="10" fill="#77749a">Rechercher une note…</text>
+
+  <rect x="796" y="258" width="238" height="96" rx="14" fill="url(#card)" stroke="#3e3c62"/>
+  <text x="812" y="282" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#f4f3ff">Idées de projet</text>
+  <text x="812" y="301" font-family="Segoe UI, sans-serif" font-size="9" fill="#a9a6c9">Plateforme de gestion des services</text>
+  <text x="812" y="317" font-family="Segoe UI, sans-serif" font-size="9" fill="#a9a6c9">informatiques avec assistant IA.</text>
+  <text x="812" y="342" font-family="Segoe UI, sans-serif" font-size="8" fill="#8b88ad">Aujourd'hui · 09:24</text>
+
+  <rect x="796" y="366" width="238" height="88" rx="14" fill="#1b1e34" stroke="#2c2f4a"/>
+  <text x="812" y="390" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#f4f3ff">Révisions SQL</text>
+  <text x="812" y="409" font-family="Segoe UI, sans-serif" font-size="9" fill="#a9a6c9">Jointures, index et requêtes</text>
+  <text x="812" y="425" font-family="Segoe UI, sans-serif" font-size="9" fill="#a9a6c9">d'agrégation.</text>
+  <text x="812" y="444" font-family="Segoe UI, sans-serif" font-size="8" fill="#8b88ad">Hier · 18:02</text>
+
+  <rect x="796" y="466" width="238" height="80" rx="14" fill="#1b1e34" stroke="#2c2f4a"/>
+  <text x="812" y="490" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#f4f3ff">Liste de courses</text>
+  <text x="812" y="509" font-family="Segoe UI, sans-serif" font-size="9" fill="#a9a6c9">Cahier, stylos, clé USB…</text>
+  <text x="812" y="528" font-family="Segoe UI, sans-serif" font-size="8" fill="#8b88ad">12/11 · 20:15</text>
+
+  <rect x="796" y="562" width="238" height="44" rx="14" fill="#1b1e34"/>
+  <g fill="#6e6b91">
+    <rect x="822" y="578" width="14" height="12" rx="2"/>
+    <rect x="872" y="578" width="14" height="12" rx="2"/>
+    <rect x="922" y="578" width="14" height="12" rx="2"/>
+    <rect x="972" y="578" width="14" height="12" rx="2"/>
+  </g>
+  <rect x="822" y="575" width="14" height="2" rx="1" fill="#f0bd83"/>
+</svg>
