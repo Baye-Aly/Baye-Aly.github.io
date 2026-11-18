@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://baye-aly.github.io/sitemap.xml

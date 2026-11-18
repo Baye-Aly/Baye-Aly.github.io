@@ -15,9 +15,21 @@
   }
 
   /* ---------- Theme ---------- */
+  /* The <head> boot script already applied the saved (or system) theme, so the
+     first paint is correct. We only persist an explicit user choice here. */
   const THEME_KEY = "ba-theme";
   const themeToggle = document.getElementById("themeToggle");
   const themeMeta = document.querySelector('meta[name="theme-color"]');
+  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function storedTheme() {
+    try {
+      const value = localStorage.getItem(THEME_KEY);
+      return value === "light" || value === "dark" ? value : null;
+    } catch (err) {
+      return null;
+    }
+  }
 
   function syncThemeLabel() {
     if (!themeToggle) return;
@@ -26,22 +38,35 @@
     themeToggle.setAttribute("aria-label", t(isDark ? "a11y.themeLight" : "a11y.themeDark"));
   }
 
-  function applyTheme(theme) {
+  function applyTheme(theme, persist) {
     doc.setAttribute("data-theme", theme);
     syncThemeLabel();
     if (themeMeta) themeMeta.setAttribute("content", theme === "dark" ? "#070B12" : "#F7F3EB");
-    try {
-      localStorage.setItem(THEME_KEY, theme);
-    } catch (err) {
-      /* storage unavailable */
+    if (persist) {
+      try {
+        localStorage.setItem(THEME_KEY, theme);
+      } catch (err) {
+        /* storage unavailable */
+      }
     }
   }
 
   if (themeToggle) {
-    applyTheme(doc.getAttribute("data-theme") === "light" ? "light" : "dark");
+    syncThemeLabel();
     themeToggle.addEventListener("click", function () {
-      applyTheme(doc.getAttribute("data-theme") === "light" ? "dark" : "light");
+      applyTheme(doc.getAttribute("data-theme") === "light" ? "dark" : "light", true);
     });
+
+    /* Follow the system preference until the visitor picks a theme himself. */
+    const onSystemTheme = function (event) {
+      if (storedTheme()) return;
+      applyTheme(event.matches ? "dark" : "light", false);
+    };
+    if (typeof darkQuery.addEventListener === "function") {
+      darkQuery.addEventListener("change", onSystemTheme);
+    } else if (typeof darkQuery.addListener === "function") {
+      darkQuery.addListener(onSystemTheme);
+    }
   }
 
   /* ---------- Header state + scroll progress + back to top ---------- */
@@ -311,6 +336,277 @@
     });
   }
 
+  /* ---------- Project detail dialogs ---------- */
+  const projectDialog = document.getElementById("projectDialog");
+  const projectPanels = projectDialog
+    ? Array.from(projectDialog.querySelectorAll("[data-project-panel]"))
+    : [];
+  const projectTitleEl = document.getElementById("projectDialogTitle");
+  const PROJECT_TITLE_KEYS = {
+    "it-smart-desk": "projects.p4.title",
+    pharmacie: "projects.p1.title",
+    restaurant: "projects.p2.title",
+    "bloc-notes": "projects.p3.title",
+  };
+  let lastProjectTrigger = null;
+
+  function projectPanelFor(slug) {
+    if (!slug) return null;
+    return (
+      projectPanels.filter(function (panel) {
+        return panel.getAttribute("data-project-panel") === slug;
+      })[0] || null
+    );
+  }
+
+  function projectTitleFor(slug, fallback) {
+    const key = PROJECT_TITLE_KEYS[slug];
+    if (key) {
+      const value = t(key);
+      if (value && value !== key) return value;
+    }
+    return fallback || "";
+  }
+
+  function updateProjectTitle(slug, fallback) {
+    if (!projectTitleEl) return;
+    projectTitleEl.textContent = projectTitleFor(slug, fallback);
+  }
+
+  function syncProjectUrl(slug) {
+    if (!window.history || typeof window.history.replaceState !== "function") return;
+    try {
+      const url = new URL(window.location.href);
+      if (slug) url.searchParams.set("project", slug);
+      else url.searchParams.delete("project");
+      window.history.replaceState(window.history.state, "", url.toString());
+    } catch (err) {
+      /* ignore — deep links are a bonus, not a requirement */
+    }
+  }
+
+  function openProject(slug, trigger) {
+    const panel = projectPanelFor(slug);
+    if (!projectDialog || !panel) return;
+
+    lastProjectTrigger = trigger || null;
+    projectPanels.forEach(function (item) {
+      item.hidden = item !== panel;
+    });
+    updateProjectTitle(slug, trigger ? trigger.getAttribute("data-project-title") : "");
+
+    if (!projectDialog.open) {
+      if (typeof projectDialog.showModal === "function") projectDialog.showModal();
+      else projectDialog.setAttribute("open", "");
+    }
+    projectDialog.classList.add("is-open");
+    document.body.classList.add("dialog-open");
+    syncProjectUrl(slug);
+
+    const closeBtn = projectDialog.querySelector("[data-dialog-close]");
+    if (projectTitleEl) projectTitleEl.focus({ preventScroll: true });
+    else if (closeBtn) closeBtn.focus({ preventScroll: true });
+  }
+
+  function closeProject() {
+    if (!projectDialog) return;
+    projectDialog.classList.remove("is-open");
+    if (projectDialog.open && typeof projectDialog.close === "function") {
+      projectDialog.close();
+    } else {
+      projectDialog.removeAttribute("open");
+      afterProjectClose();
+    }
+  }
+
+  function afterProjectClose() {
+    projectPanels.forEach(function (panel) {
+      panel.hidden = true;
+    });
+    document.body.classList.remove("dialog-open");
+    syncProjectUrl(null);
+
+    if (lastProjectTrigger && typeof lastProjectTrigger.focus === "function") {
+      lastProjectTrigger.focus({ preventScroll: true });
+    }
+    lastProjectTrigger = null;
+  }
+
+  document.querySelectorAll("[data-project-open]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      openProject(button.getAttribute("data-project-open"), button);
+    });
+  });
+
+  if (projectDialog) {
+    projectDialog.addEventListener("click", function (event) {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      if (target === projectDialog) {
+        closeProject();
+        return;
+      }
+
+      if (target.closest("[data-dialog-close]")) {
+        event.preventDefault();
+        closeProject();
+        return;
+      }
+
+      const closer = target.closest("[data-close-dialog]");
+      if (closer) closeProject();
+    });
+
+    projectDialog.addEventListener("close", afterProjectClose);
+    projectDialog.addEventListener("cancel", function () {
+      projectDialog.classList.remove("is-open");
+    });
+  }
+
+  /* Deep link: /?project=it-smart-desk opens the matching panel. */
+  try {
+    const initialSlug = new URLSearchParams(window.location.search).get("project");
+    if (initialSlug) {
+      const initialPanel = projectPanelFor(initialSlug);
+      if (initialPanel) {
+        const innerTitle = initialPanel.querySelector("h3");
+        openProject(initialSlug, null);
+        updateProjectTitle(initialSlug, innerTitle ? innerTitle.textContent.trim() : "");
+      }
+    }
+  } catch (err) {
+    /* URLSearchParams unavailable — skip deep linking */
+  }
+
+  /* ---------- Contact form ---------- */
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    const statusEl = document.getElementById("formStatus");
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const endpoint = (contactForm.getAttribute("data-endpoint") || "").trim();
+    const fields = Array.from(contactForm.querySelectorAll("input, textarea")).filter(function (field) {
+      return field.type !== "hidden" && field.name !== "company";
+    });
+
+    function setStatus(message, state) {
+      if (!statusEl) return;
+      statusEl.textContent = message;
+      if (state) statusEl.setAttribute("data-state", state);
+      else statusEl.removeAttribute("data-state");
+    }
+
+    function clearErrors() {
+      fields.forEach(function (field) {
+        field.removeAttribute("aria-invalid");
+        const wrapper = field.closest(".form-field");
+        if (wrapper) wrapper.classList.remove("has-error");
+      });
+    }
+
+    function markErrors() {
+      let firstInvalid = null;
+      fields.forEach(function (field) {
+        const valid = field.checkValidity();
+        if (valid) {
+          field.removeAttribute("aria-invalid");
+          const wrapper = field.closest(".form-field");
+          if (wrapper) wrapper.classList.remove("has-error");
+        } else {
+          field.setAttribute("aria-invalid", "true");
+          const wrapper = field.closest(".form-field");
+          if (wrapper) wrapper.classList.add("has-error");
+          if (!firstInvalid) firstInvalid = field;
+        }
+      });
+      return firstInvalid;
+    }
+
+    fields.forEach(function (field) {
+      field.addEventListener("input", function () {
+        if (field.getAttribute("aria-invalid") === "true" && field.checkValidity()) {
+          field.removeAttribute("aria-invalid");
+          const wrapper = field.closest(".form-field");
+          if (wrapper) wrapper.classList.remove("has-error");
+        }
+      });
+    });
+
+    function readValue(name) {
+      const field = contactForm.elements[name];
+      return field && typeof field.value === "string" ? field.value.trim() : "";
+    }
+
+    function buildMailto() {
+      const name = readValue("name");
+      const email = readValue("email");
+      const subject = readValue("subject") || t("form.subject");
+      const message = readValue("message");
+      const body = message + "\n\n— " + name + (email ? " (" + email + ")" : "");
+      return (
+        "mailto:bayeelhadj@gmail.com?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body)
+      );
+    }
+
+    contactForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      clearErrors();
+
+      /* Honeypot: bots fill it, humans never see it. */
+      if (readValue("company")) {
+        setStatus(t("form.statusSuccess"), "success");
+        contactForm.reset();
+        return;
+      }
+
+      const firstInvalid = markErrors();
+      if (firstInvalid) {
+        setStatus(t("form.statusInvalid"), "error");
+        firstInvalid.focus({ preventScroll: false });
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.setAttribute("aria-busy", "true");
+      }
+      setStatus("", "");
+
+      if (endpoint) {
+        try {
+          const response = await fetch(endpoint, {
+            method: "POST",
+            body: new FormData(contactForm),
+            headers: { Accept: "application/json" },
+          });
+          if (!response.ok) throw new Error("HTTP " + response.status);
+          setStatus(t("form.statusSuccess"), "success");
+          contactForm.reset();
+        } catch (err) {
+          /* The endpoint is optional: fall back to a prefilled email. */
+          setStatus(t("form.statusError"), "error");
+          window.location.href = buildMailto();
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.removeAttribute("aria-busy");
+          }
+        }
+        return;
+      }
+
+      setStatus(t("form.statusMailto"), "info");
+      window.location.href = buildMailto();
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.removeAttribute("aria-busy");
+      }
+    });
+  }
+
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -321,6 +617,20 @@
     if (menuToggle && mobileNav) {
       const open = menuToggle.getAttribute("aria-expanded") === "true";
       menuToggle.setAttribute("aria-label", t(open ? "a11y.menuClose" : "a11y.menuOpen"));
+    }
+
+    if (projectDialog && projectDialog.open) {
+      const activePanel = projectPanels.filter(function (panel) {
+        return !panel.hidden;
+      })[0];
+      if (activePanel) updateProjectTitle(activePanel.getAttribute("data-project-panel"));
+    }
+
+    if (contactForm) {
+      const statusEl = document.getElementById("formStatus");
+      const state = statusEl ? statusEl.getAttribute("data-state") : "";
+      if (state === "success") statusEl.textContent = t("form.statusSuccess");
+      else if (state === "error") statusEl.textContent = t("form.statusInvalid");
     }
 
     /* The translated markup replaces the counter nodes: keep their final value
