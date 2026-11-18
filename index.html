@@ -5,12 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Baye Aly Elhadj — Développeur Web &amp; Mobile</title>
 <meta name="description" content="Portfolio de Baye Aly Elhadj, développeur web et mobile, étudiant en 3ᵉ année en Développement des Systèmes d'Information à SupNum, Nouakchott." />
+<meta name="author" content="Baye Aly Elhadj" />
 <meta name="theme-color" content="#070B12" />
-<meta property="og:title" content="Baye Aly Elhadj — Développeur Web &amp; Mobile" />
-<meta property="og:description" content="Étudiant en Systèmes d'Information à SupNum (Nouakchott). Python, Django, React, Flutter." />
+<link rel="canonical" href="https://baye-aly.github.io/" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="assets/photo.jpg" />
+<meta property="og:site_name" content="Baye Aly Elhadj" />
+<meta property="og:url" content="https://baye-aly.github.io/" />
+<meta property="og:title" content="Baye Aly Elhadj — Développeur Web &amp; Mobile" />
+<meta property="og:description" content="Étudiant en Systèmes d'Information à SupNum (Nouakchott). Python, React, Flutter, PHP et MySQL." />
+<meta property="og:image" content="https://baye-aly.github.io/assets/og-cover.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Baye Aly Elhadj — Développeur Web &amp; Mobile" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ar_MR" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Baye Aly Elhadj — Développeur Web &amp; Mobile" />
+<meta name="twitter:description" content="Portfolio de Baye Aly Elhadj : projets web et mobile, de la conception au déploiement." />
+<meta name="twitter:image" content="https://baye-aly.github.io/assets/og-cover.png" />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
 <script>
   (function () {
     try {
@@ -25,6 +41,9 @@
       }
       document.documentElement.lang = lang;
       document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute("content", theme === "light" ? "#F7F3EB" : "#070B12");
     } catch (e) { /* ignore */ }
   })();
 </script>
@@ -35,23 +54,104 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Baye Aly Elhadj",
-  "jobTitle": "Développeur Web & Mobile",
-  "email": "mailto:bayeelhadj@gmail.com",
-  "telephone": "+22233501574",
-  "url": "https://github.com/Baye-Aly",
-  "sameAs": ["https://github.com/Baye-Aly"],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Nouakchott",
-    "addressCountry": "MR"
-  },
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Institut Supérieur du Numérique (SupNum)"
-  },
-  "knowsAbout": ["Python", "JavaScript", "Java", "PHP", "Dart", "Django", "Flask", "React", "Flutter", "MySQL", "MongoDB", "SQLite"]
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://baye-aly.github.io/#person",
+      "name": "Baye Aly Elhadj",
+      "jobTitle": "Développeur Web & Mobile",
+      "description": "Étudiant en Développement des Systèmes d'Information à SupNum, Nouakchott. Développeur web et mobile full-stack.",
+      "email": "mailto:bayeelhadj@gmail.com",
+      "telephone": "+22233501574",
+      "url": "https://baye-aly.github.io/",
+      "image": "https://baye-aly.github.io/assets/photo.jpg",
+      "sameAs": ["https://github.com/Baye-Aly"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nouakchott",
+        "addressCountry": "MR"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Institut Supérieur du Numérique (SupNum)"
+      },
+      "knowsLanguage": ["ar", "fr", "en"],
+      "knowsAbout": ["Python", "JavaScript", "PHP", "Java", "Dart", "Django", "Flask", "React", "Angular", "Spring Boot", "Flutter", "Tailwind CSS", "MySQL", "PostgreSQL", "MongoDB", "SQLite", "REST API", "JWT", "PDO", "Git"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://baye-aly.github.io/#website",
+      "url": "https://baye-aly.github.io/",
+      "name": "Baye Aly Elhadj — Portfolio",
+      "inLanguage": ["fr", "en", "ar"],
+      "author": { "@id": "https://baye-aly.github.io/#person" }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://baye-aly.github.io/#page",
+      "url": "https://baye-aly.github.io/",
+      "name": "Baye Aly Elhadj — Développeur Web & Mobile",
+      "isPartOf": { "@id": "https://baye-aly.github.io/#website" },
+      "about": { "@id": "https://baye-aly.github.io/#person" },
+      "inLanguage": "fr"
+    },
+    {
+      "@type": "ItemList",
+      "name": "Projets",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "IT Smart Desk",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "description": "Plateforme ITSM de gestion des tickets, équipements et base de connaissances, avec tableaux de bord et assistant IA conversationnel protégé par des permissions par rôle.",
+            "author": { "@id": "https://baye-aly.github.io/#person" },
+            "programmingLanguage": ["JavaScript", "PHP", "SQL"]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Gestion des pharmacies",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "description": "Application web full-stack de gestion des stocks, commandes et ventes pour pharmacies.",
+            "author": { "@id": "https://baye-aly.github.io/#person" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Restaurants universitaires",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "description": "Système de gestion des tickets repas et des services du restaurant universitaire, projet intégrateur du Semestre 3.",
+            "author": { "@id": "https://baye-aly.github.io/#person" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "bloc_notes",
+            "applicationCategory": "MobileApplication",
+            "operatingSystem": "Android",
+            "description": "Application mobile de prise de notes développée avec Flutter et Dart, avec CRUD complet et interface responsive.",
+            "author": { "@id": "https://baye-aly.github.io/#person" },
+            "programmingLanguage": ["Dart"]
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MMLCM3TL"></script>
@@ -87,6 +187,12 @@
   <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.8" rx="7.5" ry="2.8" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4.5 5.8v12.4c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8V5.8"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4.5 12c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8"/></symbol>
   <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3.6 12h16.8M12 3.4c2.2 2.3 3.4 5.4 3.4 8.6s-1.2 6.3-3.4 8.6c-2.2-2.3-3.4-5.4-3.4-8.6S9.8 5.7 12 3.4Z"/></symbol>
   <symbol id="i-chevron" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m6 9.5 6 6 6-6"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-8 8M18 13.5V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V8a1.5 1.5 0 0 1 1.5-1.5H11"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5 9-5Zm9 9-9 5-9-5m18 4-9 5-9-5"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="18" cy="18" r="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M8.6 6h4.2A3.2 3.2 0 0 1 16 9.2v0a3.2 3.2 0 0 1-3.2 3.2h-1.6A3.2 3.2 0 0 0 8 15.6v0a3.2 3.2 0 0 0 3.2 3.2h4.2"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="m21 3-9.2 18-2.1-7.7L2 11.2 21 3Zm-11.3 10.3L21 3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 3 5 6v5.5c0 4.4 3 7.9 7 9.5 4-1.6 7-5.1 7-9.5V6l-7-3Z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="m9 12 2 2 4-4.5"/></symbol>
+  <symbol id="i-sparkles" viewBox="0 0 24 24"><path fill="currentColor" d="M11 2.8l1.5 4.2 4.2 1.5-4.2 1.5L11 14.2 9.5 10 5.3 8.5 9.5 7 11 2.8Zm7.5 10.4.9 2.4 2.4.9-2.4.9-.9 2.4-.9-2.4-2.4-.9 2.4-.9.9-2.4ZM5.5 15l.7 1.8 1.8.7-1.8.7L5.5 20l-.7-1.8-1.8-.7 1.8-.7.7-1.8Z"/></symbol>
 </svg>
 
 <!-- ===== Header ===== -->
@@ -104,6 +210,7 @@
       <a href="#profil" class="nav-link" data-i18n="nav.profil">Profil</a>
       <a href="#competences" class="nav-link" data-i18n="nav.skills">Compétences</a>
       <a href="#projets" class="nav-link" data-i18n="nav.projects">Projets</a>
+      <a href="#parcours" class="nav-link" data-i18n="nav.journey">Parcours</a>
       <a href="#formation" class="nav-link" data-i18n="nav.education">Formation</a>
       <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
     </nav>
@@ -143,8 +250,9 @@
       <a href="#profil"><span data-i18n="nav.profil">Profil</span><span class="mn-num">01</span></a>
       <a href="#competences"><span data-i18n="nav.skills">Compétences</span><span class="mn-num">02</span></a>
       <a href="#projets"><span data-i18n="nav.projects">Projets</span><span class="mn-num">03</span></a>
-      <a href="#formation"><span data-i18n="nav.education">Formation</span><span class="mn-num">04</span></a>
-      <a href="#contact"><span data-i18n="nav.contact">Contact</span><span class="mn-num">05</span></a>
+      <a href="#parcours"><span data-i18n="nav.journey">Parcours</span><span class="mn-num">04</span></a>
+      <a href="#formation"><span data-i18n="nav.education">Formation</span><span class="mn-num">05</span></a>
+      <a href="#contact"><span data-i18n="nav.contact">Contact</span><span class="mn-num">06</span></a>
     </nav>
     <div class="mobile-nav-foot">
       <a href="mailto:bayeelhadj@gmail.com"><bdi dir="ltr">bayeelhadj@gmail.com</bdi></a>
@@ -225,7 +333,7 @@
           </div>
           <div>
             <dt data-i18n="stats.projects">Projets</dt>
-            <dd data-i18n-html="stats.projectsValue"><span class="count" data-count="3">3</span> <small>réalisés</small></dd>
+            <dd data-i18n-html="stats.projectsValue"><span class="count" data-count="4">4</span> <small>réalisés</small></dd>
           </div>
         </dl>
       </div>
@@ -430,19 +538,50 @@
         <p class="eyebrow"><span class="num">03</span> <span data-i18n="sec.projects">Projets</span></p>
         <h2 data-i18n-html="projects.title">Sélection de<br /><span class="gradient-text">projets académiques.</span></h2>
         <p class="section-lead" data-i18n="projects.lead">
-          Des applications pensées pour répondre à des besoins réels :
-          gestion, services universitaires et productivité.
+          Des applications pensées pour répondre à des besoins réels : gestion,
+          services universitaires et productivité. Chaque projet est présenté
+          avec son contexte, ses fonctionnalités et sa stack technique.
         </p>
       </header>
 
       <div class="projects-grid">
-        <article class="project reveal" style="--d:80ms">
-          <div class="project-art art-a">
+        <article class="project project-featured reveal" style="--d:60ms">
+          <div class="project-art has-shot">
+            <img class="project-shot" src="assets/img/projects/it-smart-desk.svg" alt="Aperçu du tableau de bord IT Smart Desk" data-i18n-alt="projects.p4.alt" width="1200" height="675" loading="lazy" decoding="async" />
             <span class="project-index">01</span>
-            <svg class="project-glyph" viewBox="0 0 48 48" aria-hidden="true">
-              <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M17 11h14v26H17z"/>
-              <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M17 17h14M22 24h4M24 24v8M20.5 28.5h7"/>
-            </svg>
+            <span class="project-tag-top" data-i18n="projects.p4.top">Projet intégrateur · 2025–2026</span>
+            <span class="project-featured-badge" data-i18n="projects.featured">Projet phare</span>
+          </div>
+          <div class="project-body">
+            <h3 data-i18n="projects.p4.title">IT Smart Desk</h3>
+            <p data-i18n="projects.p4.desc">
+              Plateforme ITSM intelligente pour la gestion des services informatiques :
+              tickets, équipements, base de connaissances, tableaux de bord et assistant
+              IA conversationnel avec contrôle des permissions par rôle.
+            </p>
+            <ul class="project-tech" aria-label="Technologies">
+              <li>React</li><li>Tailwind CSS</li><li>PHP</li><li>MySQL</li>
+              <li>REST API</li><li>JWT</li><li>PDO</li><li>Git</li>
+            </ul>
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm" type="button" data-project-open="it-smart-desk" data-project-title="IT Smart Desk" aria-haspopup="dialog">
+                <span data-i18n="projects.details">Voir le détail</span>
+                <svg class="icon"><use href="#i-arrow"/></svg>
+              </button>
+              <a href="https://github.com/Baye-Aly" class="project-link" target="_blank" rel="noopener noreferrer">
+                <svg class="icon"><use href="#i-github"/></svg><span data-i18n="projects.github">GitHub</span>
+              </a>
+              <a href="#contact" class="project-link">
+                <svg class="icon"><use href="#i-sparkles"/></svg><span data-i18n="projects.requestDemo">Demander une démo</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal" style="--d:120ms">
+          <div class="project-art has-shot">
+            <img class="project-shot" src="assets/img/projects/pharmacie.svg" alt="Aperçu de l'application de gestion des pharmacies" data-i18n-alt="projects.p1.alt" width="1200" height="675" loading="lazy" decoding="async" />
+            <span class="project-index">02</span>
             <span class="project-tag-top" data-i18n="projects.p1.top">Web full-stack</span>
           </div>
           <div class="project-body">
@@ -454,19 +593,21 @@
             <ul class="project-tags">
               <li data-i18n="projects.p1.tag1">Stocks</li><li data-i18n="projects.p1.tag2">Commandes</li><li data-i18n="projects.p1.tag3">Ventes</li>
             </ul>
-            <a href="https://github.com/Baye-Aly" class="project-link" target="_blank" rel="noopener noreferrer">
-              <span data-i18n="projects.view">Voir sur GitHub</span> <svg class="icon"><use href="#i-arrow"/></svg>
-            </a>
+            <div class="project-actions">
+              <button class="btn btn-ghost btn-sm" type="button" data-project-open="pharmacie" data-project-title="Gestion des pharmacies" aria-haspopup="dialog">
+                <span data-i18n="projects.details">Voir le détail</span>
+              </button>
+              <a href="https://github.com/Baye-Aly" class="project-link" target="_blank" rel="noopener noreferrer">
+                <svg class="icon"><use href="#i-github"/></svg><span data-i18n="projects.github">GitHub</span>
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="project reveal" style="--d:160ms">
-          <div class="project-art art-b">
-            <span class="project-index">02</span>
-            <svg class="project-glyph" viewBox="0 0 48 48" aria-hidden="true">
-              <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M11 20h16a5 5 0 0 1 0 10H15a5 5 0 0 0 0 10h3"/>
-              <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M14 33h20V15a4 4 0 0 0-4-4H18M22 15h4"/>
-            </svg>
+        <article class="project reveal" style="--d:180ms">
+          <div class="project-art has-shot">
+            <img class="project-shot" src="assets/img/projects/restaurant.svg" alt="Aperçu du système de gestion des restaurants universitaires" data-i18n-alt="projects.p2.alt" width="1200" height="675" loading="lazy" decoding="async" />
+            <span class="project-index">03</span>
             <span class="project-tag-top" data-i18n="projects.p2.top">Semestre 3</span>
           </div>
           <div class="project-body">
@@ -478,19 +619,21 @@
             <ul class="project-tags">
               <li data-i18n="projects.p2.tag1">Tickets repas</li><li data-i18n="projects.p2.tag2">Services</li><li data-i18n="projects.p2.tag3">Intégrateur</li>
             </ul>
-            <a href="https://github.com/Baye-Aly" class="project-link" target="_blank" rel="noopener noreferrer">
-              <span data-i18n="projects.view">Voir sur GitHub</span> <svg class="icon"><use href="#i-arrow"/></svg>
-            </a>
+            <div class="project-actions">
+              <button class="btn btn-ghost btn-sm" type="button" data-project-open="restaurant" data-project-title="Restaurants universitaires" aria-haspopup="dialog">
+                <span data-i18n="projects.details">Voir le détail</span>
+              </button>
+              <a href="https://github.com/Baye-Aly" class="project-link" target="_blank" rel="noopener noreferrer">
+                <svg class="icon"><use href="#i-github"/></svg><span data-i18n="projects.github">GitHub</span>
+              </a>
+            </div>
           </div>
         </article>
 
         <article class="project reveal" style="--d:240ms">
-          <div class="project-art art-c">
-            <span class="project-index">03</span>
-            <svg class="project-glyph" viewBox="0 0 48 48" aria-hidden="true">
-              <rect x="16" y="7" width="16" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="2.2"/>
-              <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M22 12h4M20 19h8M20 24h8M20 29h5M22 36h4"/>
-            </svg>
+          <div class="project-art has-shot">
+            <img class="project-shot" src="assets/img/projects/bloc-notes.svg" alt="Aperçu de l'application mobile bloc_notes" data-i18n-alt="projects.p3.alt" width="1200" height="675" loading="lazy" decoding="async" />
+            <span class="project-index">04</span>
             <span class="project-tag-top" data-i18n="projects.p3.top">Flutter · Dart</span>
           </div>
           <div class="project-body">
@@ -500,11 +643,16 @@
               gestion des notes, CRUD complet et interface responsive.
             </p>
             <ul class="project-tags">
-              <li>Flutter</li><li>CRUD</li><li data-i18n="projects.p3.tag3">UI responsive</li>
+              <li>Flutter</li><li>Dart</li><li data-i18n="projects.p3.tag3">UI responsive</li>
             </ul>
-            <a href="https://github.com/Baye-Aly" class="project-link" target="_blank" rel="noopener noreferrer">
-              <span data-i18n="projects.view">Voir sur GitHub</span> <svg class="icon"><use href="#i-arrow"/></svg>
-            </a>
+            <div class="project-actions">
+              <button class="btn btn-ghost btn-sm" type="button" data-project-open="bloc-notes" data-project-title="bloc_notes" aria-haspopup="dialog">
+                <span data-i18n="projects.details">Voir le détail</span>
+              </button>
+              <a href="https://github.com/Baye-Aly/bloc_notes" class="project-link" target="_blank" rel="noopener noreferrer">
+                <svg class="icon"><use href="#i-github"/></svg><span data-i18n="projects.github">GitHub</span>
+              </a>
+            </div>
           </div>
         </article>
       </div>
@@ -519,13 +667,249 @@
     </div>
   </section>
 
+  <!-- ===== Fenêtres de détail des projets ===== -->
+  <dialog class="project-dialog" id="projectDialog" aria-labelledby="projectDialogTitle">
+    <div class="dialog-shell">
+      <header class="dialog-head">
+        <div>
+          <p class="eyebrow" id="projectDialogKicker" data-i18n="projects.about">À propos</p>
+          <h2 id="projectDialogTitle" tabindex="-1">IT Smart Desk</h2>
+        </div>
+        <button class="icon-btn dialog-close" type="button" data-dialog-close aria-label="Fermer" data-i18n-aria-label="a11y.closeDialog">
+          <svg class="icon"><use href="#i-close"/></svg>
+        </button>
+      </header>
+
+      <div class="dialog-body">
+        <article class="project-detail" data-project-panel="it-smart-desk" hidden>
+          <div class="detail-hero">
+            <img src="assets/img/projects/it-smart-desk.svg" alt="Aperçu du tableau de bord IT Smart Desk" data-i18n-alt="projects.p4.alt" width="1200" height="675" loading="lazy" decoding="async" />
+          </div>
+          <p class="detail-lead" data-i18n="projects.p4.long">
+            IT Smart Desk est une plateforme de gestion des services informatiques (ITSM)
+            conçue comme projet intégrateur à SupNum. Elle centralise les demandes, les
+            équipements et la connaissance technique, avec des tableaux de bord et un
+            assistant IA qui respecte les permissions de chaque rôle.
+          </p>
+          <div class="detail-grid">
+            <div>
+              <h3 class="detail-subtitle" data-i18n="projects.features">Fonctionnalités clés</h3>
+              <ul class="detail-list">
+                <li data-i18n="projects.p4.f1">Gestion des tickets et du cycle de vie des demandes</li>
+                <li data-i18n="projects.p4.f2">Inventaire des équipements et suivi de maintenance</li>
+                <li data-i18n="projects.p4.f3">Base de connaissances consultable par les équipes</li>
+                <li data-i18n="projects.p4.f4">Tableaux de bord et indicateurs de service</li>
+                <li data-i18n="projects.p4.f5">Assistant IA conversationnel intégré</li>
+                <li data-i18n="projects.p4.f6">Permissions par rôle : employé, technicien, administrateur</li>
+                <li data-i18n="projects.p4.f7">API REST sécurisée avec JWT et requêtes préparées PDO</li>
+              </ul>
+            </div>
+            <aside class="detail-facts">
+              <dl>
+                <div><dt data-i18n="projects.role">Rôle</dt><dd data-i18n="projects.p4.role">Conception et développement full-stack</dd></div>
+                <div><dt data-i18n="projects.context">Contexte</dt><dd data-i18n="projects.p4.context">Projet intégrateur · SupNum</dd></div>
+                <div><dt data-i18n="projects.year">Année</dt><dd data-i18n="projects.p4.year">2025–2026</dd></div>
+                <div><dt data-i18n="projects.status">Statut</dt><dd data-i18n="projects.p4.status">Projet académique livré</dd></div>
+                <div>
+                  <dt data-i18n="projects.stack">Stack technique</dt>
+                  <dd>
+                    <ul class="project-tech">
+                      <li>React</li><li>Tailwind CSS</li><li>PHP</li><li>MySQL</li>
+                      <li>REST API</li><li>JWT</li><li>PDO</li><li>Git</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+              <div class="detail-actions">
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Baye-Aly" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon"><use href="#i-github"/></svg><span data-i18n="projects.github">GitHub</span>
+                </a>
+                <a class="btn btn-primary btn-sm" href="#contact" data-close-dialog>
+                  <svg class="icon"><use href="#i-sparkles"/></svg><span data-i18n="projects.requestDemo">Demander une démo</span>
+                </a>
+              </div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="project-detail" data-project-panel="pharmacie" hidden>
+          <div class="detail-hero">
+            <img src="assets/img/projects/pharmacie.svg" alt="Aperçu de l'application de gestion des pharmacies" data-i18n-alt="projects.p1.alt" width="1200" height="675" loading="lazy" decoding="async" />
+          </div>
+          <p class="detail-lead" data-i18n="projects.p1.long">
+            Application de gestion des stocks, commandes et ventes pour pharmacies,
+            avec une interface web full-stack. L'objectif : centraliser les opérations
+            quotidiennes et garder une vision claire du stock.
+          </p>
+          <div class="detail-grid">
+            <div>
+              <h3 class="detail-subtitle" data-i18n="projects.features">Fonctionnalités clés</h3>
+              <ul class="detail-list">
+                <li data-i18n="projects.p1.f1">Suivi des stocks et des seuils d'alerte</li>
+                <li data-i18n="projects.p1.f2">Gestion des commandes fournisseurs</li>
+                <li data-i18n="projects.p1.f3">Enregistrement des ventes et consultation de l'historique</li>
+              </ul>
+            </div>
+            <aside class="detail-facts">
+              <dl>
+                <div><dt data-i18n="projects.role">Rôle</dt><dd data-i18n="projects.p1.role">Développement web full-stack</dd></div>
+                <div><dt data-i18n="projects.context">Contexte</dt><dd data-i18n="projects.p1.context">Projet académique</dd></div>
+                <div><dt data-i18n="projects.stack">Stack technique</dt><dd data-i18n="projects.p1.stack">Application web full-stack</dd></div>
+              </dl>
+              <div class="detail-actions">
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Baye-Aly" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon"><use href="#i-github"/></svg><span data-i18n="projects.github">GitHub</span>
+                </a>
+              </div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="project-detail" data-project-panel="restaurant" hidden>
+          <div class="detail-hero">
+            <img src="assets/img/projects/restaurant.svg" alt="Aperçu du système de gestion des restaurants universitaires" data-i18n-alt="projects.p2.alt" width="1200" height="675" loading="lazy" decoding="async" />
+          </div>
+          <p class="detail-lead" data-i18n="projects.p2.long">
+            Système de gestion des tickets repas et des services du restaurant
+            universitaire, réalisé comme projet intégrateur du Semestre 3.
+            Le projet couvre les services, les réservations et le suivi des tickets.
+          </p>
+          <div class="detail-grid">
+            <div>
+              <h3 class="detail-subtitle" data-i18n="projects.features">Fonctionnalités clés</h3>
+              <ul class="detail-list">
+                <li data-i18n="projects.p2.f1">Gestion des tickets repas et de leur validité</li>
+                <li data-i18n="projects.p2.f2">Organisation des services et des réservations</li>
+                <li data-i18n="projects.p2.f3">Suivi de la fréquentation et des services du restaurant</li>
+              </ul>
+            </div>
+            <aside class="detail-facts">
+              <dl>
+                <div><dt data-i18n="projects.role">Rôle</dt><dd data-i18n="projects.p2.role">Conception et développement</dd></div>
+                <div><dt data-i18n="projects.context">Contexte</dt><dd data-i18n="projects.p2.context">Projet intégrateur · Semestre 3</dd></div>
+                <div><dt data-i18n="projects.stack">Stack technique</dt><dd data-i18n="projects.p2.stack">Application web de gestion</dd></div>
+              </dl>
+              <div class="detail-actions">
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Baye-Aly" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon"><use href="#i-github"/></svg><span data-i18n="projects.github">GitHub</span>
+                </a>
+              </div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="project-detail" data-project-panel="bloc-notes" hidden>
+          <div class="detail-hero">
+            <img src="assets/img/projects/bloc-notes.svg" alt="Aperçu de l'application mobile bloc_notes" data-i18n-alt="projects.p3.alt" width="1200" height="675" loading="lazy" decoding="async" />
+          </div>
+          <p class="detail-lead" data-i18n="projects.p3.long">
+            Application bloc-notes mobile développée avec Flutter et Dart.
+            Elle permet de créer, modifier et supprimer des notes dans une interface
+            responsive pensée pour le mobile.
+          </p>
+          <div class="detail-grid">
+            <div>
+              <h3 class="detail-subtitle" data-i18n="projects.features">Fonctionnalités clés</h3>
+              <ul class="detail-list">
+                <li data-i18n="projects.p3.f1">Création, édition et suppression de notes (CRUD)</li>
+                <li data-i18n="projects.p3.f2">Interface responsive et composants Material Design</li>
+                <li data-i18n="projects.p3.f3">Organisation simple et lisible des notes</li>
+              </ul>
+            </div>
+            <aside class="detail-facts">
+              <dl>
+                <div><dt data-i18n="projects.role">Rôle</dt><dd data-i18n="projects.p3.role">Développement mobile</dd></div>
+                <div><dt data-i18n="projects.context">Contexte</dt><dd data-i18n="projects.p3.context">Projet personnel</dd></div>
+                <div>
+                  <dt data-i18n="projects.stack">Stack technique</dt>
+                  <dd><ul class="project-tech"><li>Flutter</li><li>Dart</li></ul></dd>
+                </div>
+              </dl>
+              <div class="detail-actions">
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Baye-Aly/bloc_notes" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon"><use href="#i-github"/></svg><span data-i18n="projects.github">GitHub</span>
+                </a>
+              </div>
+            </aside>
+          </div>
+        </article>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ===== Learning Journey ===== -->
+  <section class="section section-alt" id="parcours">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow"><span class="num">04</span> <span data-i18n="sec.journey">Parcours</span></p>
+        <h2 data-i18n-html="journey.title">Apprendre,<br /><span class="gradient-text">construire, progresser.</span></h2>
+        <p class="section-lead" data-i18n="journey.lead">
+          Les étapes qui ont structuré mes compétences, des premières lignes de code
+          aux projets full-stack les plus complets.
+        </p>
+      </header>
+
+      <ol class="journey">
+        <li class="journey-step reveal" style="--d:60ms">
+          <span class="journey-marker" aria-hidden="true">01</span>
+          <div class="journey-card">
+            <p class="journey-period" data-i18n="journey.s1.period">2024 · Fondations</p>
+            <h3 data-i18n="journey.s1.title">Les bases du code</h3>
+            <p data-i18n="journey.s1.desc">
+              Algorithmique, HTML/CSS et premiers programmes en Python.
+              Mise en place d'une méthode de travail et des bases Git.
+            </p>
+            <ul class="journey-tags"><li>Python</li><li>HTML / CSS</li><li>Git</li></ul>
+          </div>
+        </li>
+        <li class="journey-step reveal" style="--d:120ms">
+          <span class="journey-marker" aria-hidden="true">02</span>
+          <div class="journey-card">
+            <p class="journey-period" data-i18n="journey.s2.period">2025 · Développement web</p>
+            <h3 data-i18n="journey.s2.title">Du front au back-end</h3>
+            <p data-i18n="journey.s2.desc">
+              Applications web full-stack : PHP/MySQL, Django et Flask, interfaces React.
+              Requêtes SQL, modélisation des données et premières APIs REST.
+            </p>
+            <ul class="journey-tags"><li>PHP</li><li>MySQL</li><li>Django</li><li>Flask</li><li>React</li><li>REST</li></ul>
+          </div>
+        </li>
+        <li class="journey-step reveal" style="--d:180ms">
+          <span class="journey-marker" aria-hidden="true">03</span>
+          <div class="journey-card">
+            <p class="journey-period" data-i18n="journey.s3.period">2025–2026 · Projets</p>
+            <h3 data-i18n="journey.s3.title">Architecture &amp; services</h3>
+            <p data-i18n="journey.s3.desc">
+              Projet intégrateur IT Smart Desk : gestion de services, authentification
+              JWT, contrôle des permissions et assistant IA conversationnel.
+            </p>
+            <ul class="journey-tags"><li>React</li><li>Tailwind CSS</li><li>JWT</li><li>PDO</li><li>MySQL</li><li data-i18n="journey.s3.tagAI">IA</li></ul>
+          </div>
+        </li>
+        <li class="journey-step reveal" style="--d:240ms">
+          <span class="journey-marker" aria-hidden="true">04</span>
+          <div class="journey-card">
+            <p class="journey-period" data-i18n="journey.s4.period">2026 · Spécialisation</p>
+            <h3 data-i18n="journey.s4.title">Mobile &amp; écosystème</h3>
+            <p data-i18n="journey.s4.desc">
+              Approfondissement mobile avec Flutter et Dart, découverte d'Angular
+              et de Spring Boot, avec une attention constante à la qualité du code
+              et à l'expérience utilisateur.
+            </p>
+            <ul class="journey-tags"><li>Flutter</li><li>Dart</li><li>Angular</li><li>Spring Boot</li><li>UX</li></ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
   <!-- ===== Formation & Langues ===== -->
-  <section class="section section-alt" id="formation">
+  <section class="section" id="formation">
     <div class="container">
       <div class="two-col">
         <div>
           <header class="section-head reveal">
-            <p class="eyebrow"><span class="num">04</span> <span data-i18n="sec.education">Formation</span></p>
+            <p class="eyebrow"><span class="num">05</span> <span data-i18n="sec.education">Formation</span></p>
             <h2 data-i18n-html="education.title">Parcours<br /><span class="gradient-text">universitaire.</span></h2>
           </header>
 
@@ -557,7 +941,7 @@
 
         <div>
           <header class="section-head reveal">
-            <p class="eyebrow"><span class="num">05</span> <span data-i18n="sec.languages">Langues</span></p>
+            <p class="eyebrow"><span class="num">06</span> <span data-i18n="sec.languages">Langues</span></p>
             <h2 data-i18n-html="languages.title">Communiquer<br /><span class="gradient-text">sans frontière.</span></h2>
           </header>
 
@@ -600,40 +984,84 @@
       <div class="contact-panel reveal">
         <div class="contact-bg" aria-hidden="true"></div>
         <div class="contact-inner">
-          <p class="eyebrow light"><span class="num">06</span> <span data-i18n="sec.contact">Contact</span></p>
+          <p class="eyebrow light"><span class="num">07</span> <span data-i18n="sec.contact">Contact</span></p>
           <h2 data-i18n-html="contact.title">Une idée, <br />un projet à construire ?</h2>
           <p class="contact-lead" data-i18n="contact.lead">
             Je suis disponible pour un projet académique ou professionnel.
             Écrivez-moi : je réponds rapidement, en français, en arabe ou en anglais.
           </p>
 
-          <div class="contact-actions">
-            <a href="mailto:bayeelhadj@gmail.com?subject=Contact%20depuis%20votre%20portfolio" class="btn btn-light">
-              <svg class="icon"><use href="#i-mail"/></svg>
-              <span data-i18n="contact.emailBtn">Envoyer un e-mail</span>
-            </a>
-            <a href="https://wa.me/22233501574" class="btn btn-glass" target="_blank" rel="noopener noreferrer">
-              <svg class="icon"><use href="#i-whatsapp"/></svg>
-              <span>WhatsApp</span>
-            </a>
-          </div>
+          <div class="contact-layout">
+            <form class="contact-form reveal" id="contactForm" data-endpoint="" novalidate>
+              <h3 class="form-title" data-i18n="form.title">Envoyez-moi un message</h3>
+              <p class="form-intro" data-i18n="form.intro">
+                Décrivez votre besoin en quelques lignes. Je vous réponds sous 48 h.
+              </p>
 
-          <div class="contact-grid">
-            <a href="mailto:bayeelhadj@gmail.com" class="contact-item">
-              <svg class="icon"><use href="#i-mail"/></svg>
-              <span><small data-i18n="contact.email">E-mail</small><bdi dir="ltr">bayeelhadj@gmail.com</bdi></span>
-            </a>
-            <a href="tel:+22233501574" class="contact-item">
-              <svg class="icon"><use href="#i-phone"/></svg>
-              <span><small data-i18n="contact.phone">Téléphone</small><bdi dir="ltr">+222 33 50 15 74</bdi></span>
-            </a>
-            <a href="https://github.com/Baye-Aly" class="contact-item" target="_blank" rel="noopener noreferrer">
-              <svg class="icon"><use href="#i-github"/></svg>
-              <span><small>GitHub</small><bdi dir="ltr">github.com/Baye-Aly</bdi></span>
-            </a>
-            <div class="contact-item">
-              <svg class="icon"><use href="#i-pin"/></svg>
-              <span><small data-i18n="contact.location">Localisation</small><span data-i18n="contact.locationValue">Nouakchott, Mauritanie</span></span>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="cf-name" data-i18n="form.name">Nom</label>
+                  <input id="cf-name" name="name" type="text" autocomplete="name" required minlength="2" placeholder="Votre nom" data-i18n-placeholder="form.namePh" />
+                </div>
+                <div class="form-field">
+                  <label for="cf-email" data-i18n="form.email">E-mail</label>
+                  <input id="cf-email" name="email" type="email" autocomplete="email" required placeholder="vous@exemple.com" data-i18n-placeholder="form.emailPh" dir="ltr" />
+                </div>
+                <div class="form-field full">
+                  <label for="cf-subject" data-i18n="form.subject">Sujet</label>
+                  <input id="cf-subject" name="subject" type="text" autocomplete="off" placeholder="Projet, stage, collaboration…" data-i18n-placeholder="form.subjectPh" />
+                </div>
+                <div class="form-field full">
+                  <label for="cf-message" data-i18n="form.message">Message</label>
+                  <textarea id="cf-message" name="message" rows="5" required minlength="10" placeholder="Votre message…" data-i18n-placeholder="form.messagePh"></textarea>
+                </div>
+              </div>
+
+              <input class="form-hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+              <div class="form-foot">
+                <p class="form-note" id="formNote" data-i18n="form.note">
+                  Vos informations servent uniquement à vous répondre. Aucun partage.
+                </p>
+                <button class="btn btn-light" type="submit">
+                  <svg class="icon"><use href="#i-send"/></svg>
+                  <span data-i18n="form.submit">Envoyer le message</span>
+                </button>
+              </div>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="contact-side reveal" style="--d:80ms">
+              <p class="contact-side-title" data-i18n="contact.direct">Ou contactez-moi directement</p>
+              <div class="contact-actions">
+                <a href="mailto:bayeelhadj@gmail.com?subject=Contact%20depuis%20votre%20portfolio" class="btn btn-light">
+                  <svg class="icon"><use href="#i-mail"/></svg>
+                  <span data-i18n="contact.emailBtn">Envoyer un e-mail</span>
+                </a>
+                <a href="https://wa.me/22233501574" class="btn btn-glass" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon"><use href="#i-whatsapp"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+
+              <div class="contact-grid">
+                <a href="mailto:bayeelhadj@gmail.com" class="contact-item">
+                  <svg class="icon"><use href="#i-mail"/></svg>
+                  <span><small data-i18n="contact.email">E-mail</small><bdi dir="ltr">bayeelhadj@gmail.com</bdi></span>
+                </a>
+                <a href="tel:+22233501574" class="contact-item">
+                  <svg class="icon"><use href="#i-phone"/></svg>
+                  <span><small data-i18n="contact.phone">Téléphone</small><bdi dir="ltr">+222 33 50 15 74</bdi></span>
+                </a>
+                <a href="https://github.com/Baye-Aly" class="contact-item" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon"><use href="#i-github"/></svg>
+                  <span><small>GitHub</small><bdi dir="ltr">github.com/Baye-Aly</bdi></span>
+                </a>
+                <div class="contact-item">
+                  <svg class="icon"><use href="#i-pin"/></svg>
+                  <span><small data-i18n="contact.location">Localisation</small><span data-i18n="contact.locationValue">Nouakchott, Mauritanie</span></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
